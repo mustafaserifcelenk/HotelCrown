@@ -20,6 +20,15 @@ namespace HotelCrown.All_User_Control
         {
             InitializeComponent();
             ListResarvation();
+            ListServices();
+        }
+
+        private void ListServices()
+        {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                cboServices.DataSource = db.Services.ToList();
+            }
         }
 
         private void ListResarvation()
@@ -27,6 +36,21 @@ namespace HotelCrown.All_User_Control
             using (HotelCrownContext db = new HotelCrownContext())
             {
                 dgvReservations.DataSource = db.Reservations.ToList();
+            }
+        }
+        private void ListAdditionalRooms()
+        {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                dgvReservations.Visible = false;
+                dgvRooms.Visible = true;
+                //dgvReservations.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).SelectMany(y=>y.)
+
+                dgvReservations.DataSource = db.Rooms.Select(x => x.Reservations.Any(y => y.CheckInDate.Value >= checkOut || y.CheckOutDate <= checkIn)).ToList();
+
+                //List<CategoryArticle> rec = context.Category.SelectMany(a => a.Articles.Select(c => new CategoryArticle { Category_Id = c.Id, Article_Id = a.Id })).ToList();
+                //dgvRooms.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).ToList();
+                //dgvReservations.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).ToList();
             }
         }
 
@@ -38,7 +62,6 @@ namespace HotelCrown.All_User_Control
             checkOut = dtCheckOut.Value;
 
             AddingMode();
-
         }
 
         private void NormalMode()
@@ -83,13 +106,6 @@ namespace HotelCrown.All_User_Control
             }
         }
 
-        private void ListAdditionalRooms()
-        {
-            using (HotelCrownContext db = new HotelCrownContext())
-            {
-                dgvReservations.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).ToList();
-            }
-        }
 
         private void dtCheckIn_ValueChanged(object sender, EventArgs e)
         {
@@ -171,6 +187,22 @@ namespace HotelCrown.All_User_Control
 
         private void BtnEditMode_Click(object sender, EventArgs e)
         {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                Reservation selectedOne = (Reservation)dgvReservations.SelectedRows[0].DataBoundItem;
+                Reservation editingOne = db.Reservations.FirstOrDefault(x => x.Id == selectedOne.Id);
+                editingOne.CheckOutDate = dtExtendOut.Value;
+                int quantity = (int)nudQuantity.Value;
+                ReservationService reservationService = new ReservationService
+                {
+                    ServiceName = editingOne.ReservationServices + cboServices.Text,
+                    Quantity = quantity
+                };
+                editingOne.ReservationServices = new List<ReservationService> { reservationService };
+                db.SaveChanges();
+            }
+            ListResarvation();
+
             btnNewReservation.Visible = true;
             btnEdit.Visible = true;
             btnDelete.Visible = true;
@@ -193,6 +225,64 @@ namespace HotelCrown.All_User_Control
             BtnEditMode.Visible = false;
             PanelControls.Visible = true;
             PanelEdit.Visible = false;
+        }
+
+        private void dgvReservations_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnOutAll_Click(object sender, EventArgs e)
+        {
+                ListResarvation();
+        }
+
+        private void btnInYes_Click(object sender, EventArgs e)
+        {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                dgvReservations.DataSource = db.Reservations.Where(x => x.CheckedIn == "Yes").ToList();
+            }
+        }
+
+        private void btnInNo_Click(object sender, EventArgs e)
+        {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                dgvReservations.DataSource = db.Reservations.Where(x => x.CheckedIn == "No").ToList();
+            }
+        }
+
+
+        private void btnInAll_Click(object sender, EventArgs e)
+        {
+            ListResarvation();
+
+        }
+
+        private void btnOutYes_Click(object sender, EventArgs e)
+        {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                dgvReservations.DataSource = db.Reservations.Where(x => x.CheckedOut == "Yes").ToList();
+            }
+        }
+
+        private void btnOutNo_Click_1(object sender, EventArgs e)
+        {
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                dgvReservations.DataSource = db.Reservations.Where(x => x.CheckedOut == "No").ToList();
+            }
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            string contain = txtSearchBox.Text;
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                dgvReservations.DataSource = db.Reservations.Select(x => x.Customers.Any(y => y.FullName.Contains(contain))).ToList();
+            }
         }
     }
 }

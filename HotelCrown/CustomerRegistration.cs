@@ -56,12 +56,12 @@ namespace HotelCrown
             DateTime checkedInTime = dtCheckInTime.Value;
             DateTime checkedOutTime = dtCheckOutTime.Value;
             string service = cboServices.Text;
-            int quantity = int.Parse(txtQuantity.Text);
+            int quantity = int.Parse(nudQuantity.Text);
             int customerId = alloteCustomer.Id;
 
             int roomId = reservation.RoomId;
-            string checkedIn = (checkedInTime != controlIn) ? "Yes" : "No";
-            string checkedOut = (controlOut != checkOutDate) ? "Yes" : "No";
+            string checkedIn = (cbxCheckedIn.Checked) ? "Yes" : "No";
+            string checkedOut = (cbxCheckedOut.Checked) ? "Yes" : "No";
 
             using (HotelCrownContext db = new HotelCrownContext())
             {
@@ -80,7 +80,8 @@ namespace HotelCrown
                     RoomId = roomId,
                     Customers = new List<Customer> { reserveCustomer },
                     ReservationServices = new List<ReservationService> { serviceCustomer }
-                });
+                }) ;
+                db.SaveChanges();
             }
             WhenChangesDone(EventArgs.Empty);
             Close();

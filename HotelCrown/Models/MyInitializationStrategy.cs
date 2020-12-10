@@ -195,8 +195,10 @@ namespace HotelCrown.Models
             //    }
             //});
 
+            context.Services.AddRange(new Service[] { service1, service2, service3 });
             context.Customers.AddRange(new Customer[] { customer1, customer2, customer3 });
             context.ReservationServices.AddRange(new ReservationService[] { reservationService1, reservationService2, reservationService3 });
+            context.Rooms.AddRange(new Room[] { room1, room2, room3 });
             context.Reservations.Add(new Reservation
             {
                 RoomId = 1,

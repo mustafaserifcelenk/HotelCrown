@@ -9,11 +9,11 @@ namespace HotelCrown.Models
 {
     public class Reservation
     {
-        //public Reservation()
-        //{
-        //    Customers = new HashSet<Customer>();
-        //    ReservationServices = new HashSet<ReservationService>();
-        //}
+        public Reservation()
+        {
+            Customers = new HashSet<Customer>();
+            ReservationServices = new HashSet<ReservationService>();
+        }
         public int Id { get; set; }
         public int RoomId { get; set; }
 
@@ -27,6 +27,10 @@ namespace HotelCrown.Models
         public DateTime? CheckedOutTime { get; set; }
         public string CheckedIn { get; set; }
         public string CheckedOut { get; set; }
+        public string AllCustomers
+        {
+            get { return $"{Customers.Select(x => x.FullName).AddComma()}"; }
+        }
         public virtual Room Room { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<ReservationService> ReservationServices { get; set; }

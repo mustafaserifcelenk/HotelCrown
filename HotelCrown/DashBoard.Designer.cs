@@ -39,6 +39,11 @@ namespace HotelCrown
             this.btnRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btnReservation = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_Services1 = new HotelCrown.All_User_Control.UC_Services();
+            this.uC_Features1 = new HotelCrown.All_User_Control.UC_Features();
+            this.uC_Customers1 = new HotelCrown.All_User_Control.UC_Customers();
+            this.uC_Reservations1 = new HotelCrown.All_User_Control.UC_Reservations();
+            this.uC_AddRoom1 = new HotelCrown.All_User_Control.UC_AddRoom();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -46,11 +51,6 @@ namespace HotelCrown
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_Services1 = new HotelCrown.All_User_Control.UC_Services();
-            this.uC_Features1 = new HotelCrown.All_User_Control.UC_Features();
-            this.uC_Customers1 = new HotelCrown.All_User_Control.UC_Customers();
-            this.uC_Reservations1 = new HotelCrown.All_User_Control.UC_Reservations();
-            this.uC_AddRoom1 = new HotelCrown.All_User_Control.UC_AddRoom();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -205,15 +205,59 @@ namespace HotelCrown
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.uC_Reservations1);
+            this.panel2.Controls.Add(this.uC_AddRoom1);
             this.panel2.Controls.Add(this.uC_Services1);
             this.panel2.Controls.Add(this.uC_Features1);
             this.panel2.Controls.Add(this.uC_Customers1);
-            this.panel2.Controls.Add(this.uC_Reservations1);
-            this.panel2.Controls.Add(this.uC_AddRoom1);
             this.panel2.Location = new System.Drawing.Point(5, 118);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1906, 950);
             this.panel2.TabIndex = 0;
+            // 
+            // uC_Services1
+            // 
+            this.uC_Services1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Services1.Name = "uC_Services1";
+            this.uC_Services1.Size = new System.Drawing.Size(1899, 947);
+            this.uC_Services1.TabIndex = 4;
+            this.uC_Services1.Visible = false;
+            // 
+            // uC_Features1
+            // 
+            this.uC_Features1.BackColor = System.Drawing.Color.White;
+            this.uC_Features1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_Features1.BackgroundImage")));
+            this.uC_Features1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Features1.Name = "uC_Features1";
+            this.uC_Features1.Size = new System.Drawing.Size(1899, 947);
+            this.uC_Features1.TabIndex = 3;
+            this.uC_Features1.Visible = false;
+            // 
+            // uC_Customers1
+            // 
+            this.uC_Customers1.BackColor = System.Drawing.Color.White;
+            this.uC_Customers1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Customers1.Name = "uC_Customers1";
+            this.uC_Customers1.Size = new System.Drawing.Size(1899, 947);
+            this.uC_Customers1.TabIndex = 2;
+            this.uC_Customers1.Visible = false;
+            // 
+            // uC_Reservations1
+            // 
+            this.uC_Reservations1.BackColor = System.Drawing.Color.White;
+            this.uC_Reservations1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.uC_Reservations1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Reservations1.Name = "uC_Reservations1";
+            this.uC_Reservations1.Size = new System.Drawing.Size(1899, 947);
+            this.uC_Reservations1.TabIndex = 1;
+            // 
+            // uC_AddRoom1
+            // 
+            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
+            this.uC_AddRoom1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddRoom1.Name = "uC_AddRoom1";
+            this.uC_AddRoom1.Size = new System.Drawing.Size(1899, 947);
+            this.uC_AddRoom1.TabIndex = 0;
             // 
             // guna2Elipse1
             // 
@@ -277,49 +321,6 @@ namespace HotelCrown
             // 
             this.guna2Elipse5.BorderRadius = 30;
             this.guna2Elipse5.TargetControl = this;
-            // 
-            // uC_Services1
-            // 
-            this.uC_Services1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Services1.Name = "uC_Services1";
-            this.uC_Services1.Size = new System.Drawing.Size(1899, 947);
-            this.uC_Services1.TabIndex = 4;
-            this.uC_Services1.Visible = false;
-            // 
-            // uC_Features1
-            // 
-            this.uC_Features1.BackColor = System.Drawing.Color.White;
-            this.uC_Features1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_Features1.BackgroundImage")));
-            this.uC_Features1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Features1.Name = "uC_Features1";
-            this.uC_Features1.Size = new System.Drawing.Size(1899, 947);
-            this.uC_Features1.TabIndex = 3;
-            this.uC_Features1.Visible = false;
-            // 
-            // uC_Customers1
-            // 
-            this.uC_Customers1.BackColor = System.Drawing.Color.White;
-            this.uC_Customers1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Customers1.Name = "uC_Customers1";
-            this.uC_Customers1.Size = new System.Drawing.Size(1899, 947);
-            this.uC_Customers1.TabIndex = 2;
-            this.uC_Customers1.Visible = false;
-            // 
-            // uC_Reservations1
-            // 
-            this.uC_Reservations1.BackColor = System.Drawing.Color.White;
-            this.uC_Reservations1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Reservations1.Name = "uC_Reservations1";
-            this.uC_Reservations1.Size = new System.Drawing.Size(1899, 947);
-            this.uC_Reservations1.TabIndex = 1;
-            // 
-            // uC_AddRoom1
-            // 
-            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
-            this.uC_AddRoom1.Location = new System.Drawing.Point(0, 0);
-            this.uC_AddRoom1.Name = "uC_AddRoom1";
-            this.uC_AddRoom1.Size = new System.Drawing.Size(1899, 947);
-            this.uC_AddRoom1.TabIndex = 0;
             // 
             // DashBoard
             // 

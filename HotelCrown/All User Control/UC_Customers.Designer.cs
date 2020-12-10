@@ -243,7 +243,7 @@ namespace HotelCrown.All_User_Control
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCustomers.ColumnHeadersHeight = 4;
+            this.dgvCustomers.ColumnHeadersHeight = 50;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -258,6 +258,7 @@ namespace HotelCrown.All_User_Control
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.RowHeadersVisible = false;
+            this.dgvCustomers.RowTemplate.Height = 35;
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomers.Size = new System.Drawing.Size(1330, 789);
             this.dgvCustomers.TabIndex = 45;
@@ -274,13 +275,13 @@ namespace HotelCrown.All_User_Control
             this.dgvCustomers.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvCustomers.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvCustomers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCustomers.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvCustomers.ThemeStyle.HeaderStyle.Height = 50;
             this.dgvCustomers.ThemeStyle.ReadOnly = true;
             this.dgvCustomers.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCustomers.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCustomers.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvCustomers.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvCustomers.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvCustomers.ThemeStyle.RowsStyle.Height = 35;
             this.dgvCustomers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCustomers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 

@@ -92,12 +92,6 @@
     <Compile Include="All User Control\UC_Services.Designer.cs">
       <DependentUpon>UC_Services.cs</DependentUpon>
     </Compile>
-    <Compile Include="All User Control\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="All User Control\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="All User Control\UC_Services.resx">
       <DependentUpon>UC_Services.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="All User Control\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegistration.resx">
       <DependentUpon>CustomerRegistration.cs</DependentUpon>

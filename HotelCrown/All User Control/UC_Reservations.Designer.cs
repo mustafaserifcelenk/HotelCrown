@@ -30,9 +30,16 @@ namespace HotelCrown.All_User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNewReservation = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvReservations = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -56,23 +63,31 @@ namespace HotelCrown.All_User_Control
             this.label2 = new System.Windows.Forms.Label();
             this.dtCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.PanelEdit = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.BtnEditMode = new Guna.UI2.WinForms.Guna2Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboServices = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtExtendOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.PanelEdit = new Guna.UI2.WinForms.Guna2Panel();
-            this.dtExtendOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboServices = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.BtnEditMode = new Guna.UI2.WinForms.Guna2Button();
-            this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRooms = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.PanelControls.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.PanelEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewReservation
@@ -100,37 +115,57 @@ namespace HotelCrown.All_User_Control
             // 
             this.dgvReservations.AllowUserToAddRows = false;
             this.dgvReservations.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvReservations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dgvReservations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvReservations.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvReservations.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReservations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvReservations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvReservations.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvReservations.ColumnHeadersHeight = 60;
+            this.dgvReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.dgvReservations.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReservations.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReservations.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvReservations.EnableHeadersVisualStyles = false;
             this.dgvReservations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvReservations.Location = new System.Drawing.Point(16, 148);
+            this.dgvReservations.Location = new System.Drawing.Point(13, 148);
             this.dgvReservations.Name = "dgvReservations";
             this.dgvReservations.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvReservations.RowHeadersVisible = false;
+            this.dgvReservations.RowHeadersWidth = 45;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvReservations.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvReservations.RowTemplate.Height = 35;
+            this.dgvReservations.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReservations.Size = new System.Drawing.Size(1880, 714);
             this.dgvReservations.TabIndex = 1;
@@ -147,13 +182,13 @@ namespace HotelCrown.All_User_Control
             this.dgvReservations.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvReservations.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvReservations.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvReservations.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvReservations.ThemeStyle.HeaderStyle.Height = 60;
             this.dgvReservations.ThemeStyle.ReadOnly = true;
             this.dgvReservations.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvReservations.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvReservations.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvReservations.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dgvReservations.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvReservations.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvReservations.ThemeStyle.RowsStyle.Height = 35;
             this.dgvReservations.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvReservations.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -193,7 +228,6 @@ namespace HotelCrown.All_User_Control
             // 
             // PanelControls
             // 
-            this.PanelControls.Controls.Add(this.PanelEdit);
             this.PanelControls.Controls.Add(this.label7);
             this.PanelControls.Controls.Add(this.txtSearchBox);
             this.PanelControls.Controls.Add(this.guna2Panel3);
@@ -243,6 +277,7 @@ namespace HotelCrown.All_User_Control
             this.txtSearchBox.ShadowDecoration.Parent = this.txtSearchBox;
             this.txtSearchBox.Size = new System.Drawing.Size(296, 56);
             this.txtSearchBox.TabIndex = 12;
+            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
             // guna2Panel3
             // 
@@ -272,6 +307,7 @@ namespace HotelCrown.All_User_Control
             this.btnOutNo.Size = new System.Drawing.Size(85, 28);
             this.btnOutNo.TabIndex = 10;
             this.btnOutNo.Text = "No";
+            this.btnOutNo.Click += new System.EventHandler(this.btnOutNo_Click_1);
             // 
             // btnOutYes
             // 
@@ -289,6 +325,7 @@ namespace HotelCrown.All_User_Control
             this.btnOutYes.Size = new System.Drawing.Size(85, 28);
             this.btnOutYes.TabIndex = 9;
             this.btnOutYes.Text = "Yes";
+            this.btnOutYes.Click += new System.EventHandler(this.btnOutYes_Click);
             // 
             // btnOutAll
             // 
@@ -306,6 +343,7 @@ namespace HotelCrown.All_User_Control
             this.btnOutAll.Size = new System.Drawing.Size(85, 28);
             this.btnOutAll.TabIndex = 8;
             this.btnOutAll.Text = "All";
+            this.btnOutAll.Click += new System.EventHandler(this.btnOutAll_Click);
             // 
             // label5
             // 
@@ -344,6 +382,7 @@ namespace HotelCrown.All_User_Control
             this.btnInNo.Size = new System.Drawing.Size(85, 28);
             this.btnInNo.TabIndex = 10;
             this.btnInNo.Text = "No";
+            this.btnInNo.Click += new System.EventHandler(this.btnInNo_Click);
             // 
             // btnInYes
             // 
@@ -361,6 +400,7 @@ namespace HotelCrown.All_User_Control
             this.btnInYes.Size = new System.Drawing.Size(85, 28);
             this.btnInYes.TabIndex = 9;
             this.btnInYes.Text = "Yes";
+            this.btnInYes.Click += new System.EventHandler(this.btnInYes_Click);
             // 
             // btnInAll
             // 
@@ -378,6 +418,7 @@ namespace HotelCrown.All_User_Control
             this.btnInAll.Size = new System.Drawing.Size(85, 28);
             this.btnInAll.TabIndex = 8;
             this.btnInAll.Text = "All";
+            this.btnInAll.Click += new System.EventHandler(this.btnInAll_Click);
             // 
             // label4
             // 
@@ -448,55 +489,11 @@ namespace HotelCrown.All_User_Control
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 37);
+            this.label1.Location = new System.Drawing.Point(36, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filter By";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(19, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 32);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "RESERVATIONS";
-            // 
-            // btnAddCustomer
-            // 
-            this.btnAddCustomer.CheckedState.Parent = this.btnAddCustomer;
-            this.btnAddCustomer.CustomImages.Parent = this.btnAddCustomer;
-            this.btnAddCustomer.FillColor = System.Drawing.Color.PaleGreen;
-            this.btnAddCustomer.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnAddCustomer.HoverState.Parent = this.btnAddCustomer;
-            this.btnAddCustomer.Location = new System.Drawing.Point(16, 878);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.ShadowDecoration.Parent = this.btnAddCustomer;
-            this.btnAddCustomer.Size = new System.Drawing.Size(375, 54);
-            this.btnAddCustomer.TabIndex = 13;
-            this.btnAddCustomer.Text = "Add Customer";
-            this.btnAddCustomer.Visible = false;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.CheckedState.Parent = this.btnCancel;
-            this.btnCancel.CustomImages.Parent = this.btnCancel;
-            this.btnCancel.FillColor = System.Drawing.Color.Red;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(397, 878);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(375, 54);
-            this.btnCancel.TabIndex = 14;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // PanelEdit
             // 
@@ -507,104 +504,12 @@ namespace HotelCrown.All_User_Control
             this.PanelEdit.Controls.Add(this.cboServices);
             this.PanelEdit.Controls.Add(this.label8);
             this.PanelEdit.Controls.Add(this.dtExtendOut);
-            this.PanelEdit.Location = new System.Drawing.Point(0, 0);
+            this.PanelEdit.Location = new System.Drawing.Point(13, 49);
             this.PanelEdit.Name = "PanelEdit";
             this.PanelEdit.ShadowDecoration.Parent = this.PanelEdit;
-            this.PanelEdit.Size = new System.Drawing.Size(1880, 90);
+            this.PanelEdit.Size = new System.Drawing.Size(1883, 93);
             this.PanelEdit.TabIndex = 15;
             this.PanelEdit.Visible = false;
-            // 
-            // dtExtendOut
-            // 
-            this.dtExtendOut.CheckedState.Parent = this.dtExtendOut;
-            this.dtExtendOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtExtendOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtExtendOut.HoverState.Parent = this.dtExtendOut;
-            this.dtExtendOut.Location = new System.Drawing.Point(291, 13);
-            this.dtExtendOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtExtendOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtExtendOut.Name = "dtExtendOut";
-            this.dtExtendOut.ShadowDecoration.Parent = this.dtExtendOut;
-            this.dtExtendOut.Size = new System.Drawing.Size(266, 63);
-            this.dtExtendOut.TabIndex = 0;
-            this.dtExtendOut.Value = new System.DateTime(2020, 12, 9, 13, 0, 56, 585);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(12, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(273, 32);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Extend the Reservation:";
-            // 
-            // cboServices
-            // 
-            this.cboServices.BackColor = System.Drawing.Color.Transparent;
-            this.cboServices.DisplayMember = "ServiceName";
-            this.cboServices.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboServices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboServices.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboServices.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboServices.FocusedState.Parent = this.cboServices;
-            this.cboServices.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboServices.HoverState.Parent = this.cboServices;
-            this.cboServices.ItemHeight = 30;
-            this.cboServices.ItemsAppearance.Parent = this.cboServices;
-            this.cboServices.Location = new System.Drawing.Point(720, 32);
-            this.cboServices.Name = "cboServices";
-            this.cboServices.ShadowDecoration.Parent = this.cboServices;
-            this.cboServices.Size = new System.Drawing.Size(351, 36);
-            this.cboServices.TabIndex = 37;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(575, 32);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(149, 32);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "Add Service:";
-            // 
-            // BtnEditMode
-            // 
-            this.BtnEditMode.CheckedState.Parent = this.BtnEditMode;
-            this.BtnEditMode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnEditMode.CustomImages.Parent = this.BtnEditMode;
-            this.BtnEditMode.FillColor = System.Drawing.Color.Orange;
-            this.BtnEditMode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnEditMode.ForeColor = System.Drawing.Color.White;
-            this.BtnEditMode.HoverState.Parent = this.BtnEditMode;
-            this.BtnEditMode.Location = new System.Drawing.Point(1392, 22);
-            this.BtnEditMode.Name = "BtnEditMode";
-            this.BtnEditMode.ShadowDecoration.Parent = this.BtnEditMode;
-            this.BtnEditMode.Size = new System.Drawing.Size(258, 54);
-            this.BtnEditMode.TabIndex = 16;
-            this.BtnEditMode.Text = "Edit";
-            this.BtnEditMode.Click += new System.EventHandler(this.BtnEditMode_Click);
-            // 
-            // nudQuantity
-            // 
-            this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nudQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nudQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nudQuantity.DisabledState.Parent = this.nudQuantity;
-            this.nudQuantity.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nudQuantity.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nudQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudQuantity.FocusedState.Parent = this.nudQuantity;
-            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.nudQuantity.Location = new System.Drawing.Point(1084, 32);
-            this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
-            this.nudQuantity.Size = new System.Drawing.Size(302, 36);
-            this.nudQuantity.TabIndex = 16;
             // 
             // guna2Button1
             // 
@@ -623,19 +528,299 @@ namespace HotelCrown.All_User_Control
             this.guna2Button1.Text = "Cancel";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // nudQuantity
+            // 
+            this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.nudQuantity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nudQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nudQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nudQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nudQuantity.DisabledState.Parent = this.nudQuantity;
+            this.nudQuantity.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.nudQuantity.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.nudQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nudQuantity.FocusedState.Parent = this.nudQuantity;
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.nudQuantity.Location = new System.Drawing.Point(1084, 32);
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
+            this.nudQuantity.Size = new System.Drawing.Size(302, 36);
+            this.nudQuantity.TabIndex = 16;
+            // 
+            // BtnEditMode
+            // 
+            this.BtnEditMode.CheckedState.Parent = this.BtnEditMode;
+            this.BtnEditMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEditMode.CustomImages.Parent = this.BtnEditMode;
+            this.BtnEditMode.FillColor = System.Drawing.Color.Orange;
+            this.BtnEditMode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnEditMode.ForeColor = System.Drawing.Color.White;
+            this.BtnEditMode.HoverState.Parent = this.BtnEditMode;
+            this.BtnEditMode.Location = new System.Drawing.Point(1392, 22);
+            this.BtnEditMode.Name = "BtnEditMode";
+            this.BtnEditMode.ShadowDecoration.Parent = this.BtnEditMode;
+            this.BtnEditMode.Size = new System.Drawing.Size(258, 54);
+            this.BtnEditMode.TabIndex = 16;
+            this.BtnEditMode.Text = "Edit";
+            this.BtnEditMode.Click += new System.EventHandler(this.BtnEditMode_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(575, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(149, 32);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Add Service:";
+            // 
+            // cboServices
+            // 
+            this.cboServices.BackColor = System.Drawing.Color.Transparent;
+            this.cboServices.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboServices.DisplayMember = "ServiceName";
+            this.cboServices.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboServices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboServices.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboServices.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboServices.FocusedState.Parent = this.cboServices;
+            this.cboServices.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboServices.HoverState.Parent = this.cboServices;
+            this.cboServices.ItemHeight = 30;
+            this.cboServices.ItemsAppearance.Parent = this.cboServices;
+            this.cboServices.Location = new System.Drawing.Point(720, 32);
+            this.cboServices.Name = "cboServices";
+            this.cboServices.ShadowDecoration.Parent = this.cboServices;
+            this.cboServices.Size = new System.Drawing.Size(351, 36);
+            this.cboServices.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(12, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(264, 32);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "New Reservation Date:";
+            // 
+            // dtExtendOut
+            // 
+            this.dtExtendOut.CheckedState.Parent = this.dtExtendOut;
+            this.dtExtendOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtExtendOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtExtendOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtExtendOut.HoverState.Parent = this.dtExtendOut;
+            this.dtExtendOut.Location = new System.Drawing.Point(291, 13);
+            this.dtExtendOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtExtendOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtExtendOut.Name = "dtExtendOut";
+            this.dtExtendOut.ShadowDecoration.Parent = this.dtExtendOut;
+            this.dtExtendOut.Size = new System.Drawing.Size(266, 63);
+            this.dtExtendOut.TabIndex = 0;
+            this.dtExtendOut.Value = new System.DateTime(2020, 12, 9, 13, 0, 56, 585);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(19, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 32);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "RESERVATIONS";
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.CheckedState.Parent = this.btnAddCustomer;
+            this.btnAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCustomer.CustomImages.Parent = this.btnAddCustomer;
+            this.btnAddCustomer.FillColor = System.Drawing.Color.PaleGreen;
+            this.btnAddCustomer.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnAddCustomer.HoverState.Parent = this.btnAddCustomer;
+            this.btnAddCustomer.Location = new System.Drawing.Point(16, 878);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.ShadowDecoration.Parent = this.btnAddCustomer;
+            this.btnAddCustomer.Size = new System.Drawing.Size(375, 54);
+            this.btnAddCustomer.TabIndex = 13;
+            this.btnAddCustomer.Text = "Add Customer";
+            this.btnAddCustomer.Visible = false;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.CheckedState.Parent = this.btnCancel;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.CustomImages.Parent = this.btnCancel;
+            this.btnCancel.FillColor = System.Drawing.Color.Red;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.HoverState.Parent = this.btnCancel;
+            this.btnCancel.Location = new System.Drawing.Point(397, 878);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
+            this.btnCancel.Size = new System.Drawing.Size(375, 54);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.DataPropertyName = "Roomno";
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "Room No";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.DataPropertyName = "CheckInDate";
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "Check-In Date";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "CheckOutDate";
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "Check-Out Date";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 300;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.DataPropertyName = "CheckedIn";
+            this.Column4.Frozen = true;
+            this.Column4.HeaderText = "Checked-In";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 350;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "CheckedOut";
+            this.Column5.Frozen = true;
+            this.Column5.HeaderText = "Checked-Out";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.Width = 350;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.DataPropertyName = "FullName";
+            this.Column6.Frozen = true;
+            this.Column6.HeaderText = "Customer";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 450;
+            // 
+            // dgvRooms
+            // 
+            this.dgvRooms.AllowUserToAddRows = false;
+            this.dgvRooms.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvRooms.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRooms.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvRooms.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRooms.ColumnHeadersHeight = 60;
+            this.dgvRooms.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvRooms.EnableHeadersVisualStyles = false;
+            this.dgvRooms.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvRooms.Location = new System.Drawing.Point(13, 148);
+            this.dgvRooms.Name = "dgvRooms";
+            this.dgvRooms.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvRooms.RowHeadersVisible = false;
+            this.dgvRooms.RowHeadersWidth = 45;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvRooms.RowTemplate.Height = 35;
+            this.dgvRooms.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRooms.Size = new System.Drawing.Size(1880, 714);
+            this.dgvRooms.TabIndex = 16;
+            this.dgvRooms.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dgvRooms.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvRooms.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvRooms.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvRooms.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvRooms.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvRooms.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvRooms.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvRooms.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvRooms.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvRooms.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvRooms.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvRooms.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvRooms.ThemeStyle.HeaderStyle.Height = 60;
+            this.dgvRooms.ThemeStyle.ReadOnly = true;
+            this.dgvRooms.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvRooms.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvRooms.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dgvRooms.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvRooms.ThemeStyle.RowsStyle.Height = 35;
+            this.dgvRooms.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvRooms.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvRooms.Visible = false;
+            // 
             // UC_Reservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dgvRooms);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PanelControls);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvReservations);
-            this.Controls.Add(this.btnNewReservation);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddCustomer);
+            this.Controls.Add(this.btnNewReservation);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.PanelEdit);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "UC_Reservations";
             this.Size = new System.Drawing.Size(1899, 947);
@@ -647,6 +832,7 @@ namespace HotelCrown.All_User_Control
             this.PanelEdit.ResumeLayout(false);
             this.PanelEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,5 +874,12 @@ namespace HotelCrown.All_User_Control
         private Guna.UI2.WinForms.Guna2ComboBox cboServices;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudQuantity;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvRooms;
     }
 }

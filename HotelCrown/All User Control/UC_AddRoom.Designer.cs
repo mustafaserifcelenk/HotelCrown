@@ -30,20 +30,18 @@ namespace HotelCrown.All_User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNewRoom = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.clbFeatures = new System.Windows.Forms.CheckedListBox();
             this.cboBed = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtMobileNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRoomNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
@@ -66,8 +64,8 @@ namespace HotelCrown.All_User_Control
             // 
             this.dgvNewRoom.AllowUserToAddRows = false;
             this.dgvNewRoom.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            this.dgvNewRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
+            this.dgvNewRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvNewRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -77,24 +75,24 @@ namespace HotelCrown.All_User_Control
             this.dgvNewRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvNewRoom.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNewRoom.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNewRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNewRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvNewRoom.ColumnHeadersHeight = 4;
             this.dgvNewRoom.ColumnHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNewRoom.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNewRoom.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvNewRoom.EnableHeadersVisualStyles = false;
             this.dgvNewRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
             this.dgvNewRoom.Location = new System.Drawing.Point(10, 40);
@@ -147,7 +145,7 @@ namespace HotelCrown.All_User_Control
             // cboBed
             // 
             this.cboBed.BackColor = System.Drawing.Color.Transparent;
-            this.cboBed.DisplayMember = "Gender";
+            this.cboBed.DisplayMember = "Capacity";
             this.cboBed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboBed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -164,31 +162,6 @@ namespace HotelCrown.All_User_Control
             this.cboBed.Size = new System.Drawing.Size(509, 36);
             this.cboBed.TabIndex = 30;
             // 
-            // txtMobileNo
-            // 
-            this.txtMobileNo.Animated = true;
-            this.txtMobileNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMobileNo.DefaultText = "";
-            this.txtMobileNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMobileNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMobileNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMobileNo.DisabledState.Parent = this.txtMobileNo;
-            this.txtMobileNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMobileNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobileNo.FocusedState.Parent = this.txtMobileNo;
-            this.txtMobileNo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtMobileNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobileNo.HoverState.Parent = this.txtMobileNo;
-            this.txtMobileNo.Location = new System.Drawing.Point(1352, 358);
-            this.txtMobileNo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMobileNo.Name = "txtMobileNo";
-            this.txtMobileNo.PasswordChar = '\0';
-            this.txtMobileNo.PlaceholderText = "Mobile No";
-            this.txtMobileNo.SelectedText = "";
-            this.txtMobileNo.ShadowDecoration.Parent = this.txtMobileNo;
-            this.txtMobileNo.Size = new System.Drawing.Size(510, 46);
-            this.txtMobileNo.TabIndex = 29;
-            // 
             // txtPrice
             // 
             this.txtPrice.Animated = true;
@@ -204,11 +177,11 @@ namespace HotelCrown.All_User_Control
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.Location = new System.Drawing.Point(1352, 449);
+            this.txtPrice.Location = new System.Drawing.Point(1357, 374);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
-            this.txtPrice.PlaceholderText = "Identity Number";
+            this.txtPrice.PlaceholderText = "Price";
             this.txtPrice.SelectedText = "";
             this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
             this.txtPrice.Size = new System.Drawing.Size(510, 46);
@@ -253,21 +226,11 @@ namespace HotelCrown.All_User_Control
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(1348, 424);
+            this.label6.Location = new System.Drawing.Point(1353, 349);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 20);
             this.label6.TabIndex = 25;
             this.label6.Text = "Price";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(1348, 335);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 20);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Bed";
             // 
             // label9
             // 
@@ -288,12 +251,13 @@ namespace HotelCrown.All_User_Control
             this.btnAddRoom.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAddRoom.ForeColor = System.Drawing.Color.White;
             this.btnAddRoom.HoverState.Parent = this.btnAddRoom;
-            this.btnAddRoom.Location = new System.Drawing.Point(1353, 503);
+            this.btnAddRoom.Location = new System.Drawing.Point(1358, 428);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
             this.btnAddRoom.Size = new System.Drawing.Size(171, 100);
             this.btnAddRoom.TabIndex = 49;
             this.btnAddRoom.Text = "Add";
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click_1);
             // 
             // btnEdit
             // 
@@ -304,7 +268,7 @@ namespace HotelCrown.All_User_Control
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.HoverState.Parent = this.btnEdit;
-            this.btnEdit.Location = new System.Drawing.Point(1530, 503);
+            this.btnEdit.Location = new System.Drawing.Point(1535, 428);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
             this.btnEdit.Size = new System.Drawing.Size(167, 100);
@@ -320,7 +284,7 @@ namespace HotelCrown.All_User_Control
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(1703, 503);
+            this.btnDelete.Location = new System.Drawing.Point(1708, 428);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(167, 100);
@@ -347,12 +311,10 @@ namespace HotelCrown.All_User_Control
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddRoom);
             this.Controls.Add(this.cboBed);
-            this.Controls.Add(this.txtMobileNo);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtRoomNo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.clbFeatures);
             this.Controls.Add(this.dgvNewRoom);
@@ -374,12 +336,10 @@ namespace HotelCrown.All_User_Control
         private System.Windows.Forms.CheckedListBox clbFeatures;
         private Guna.UI2.WinForms.Guna2DataGridView dgvNewRoom;
         private Guna.UI2.WinForms.Guna2ComboBox cboBed;
-        private Guna.UI2.WinForms.Guna2TextBox txtMobileNo;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtRoomNo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Button btnAddRoom;
         private Guna.UI2.WinForms.Guna2Button btnEdit;

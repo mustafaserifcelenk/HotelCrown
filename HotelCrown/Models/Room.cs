@@ -25,9 +25,9 @@ namespace HotelCrown.Models
         
         [Required]
         public int Price { get; set; }
-        public string Comma_Features 
+        public string AllFeatures 
         { 
-            get { return $"{Features.Select(x => x.FeatureName).Comma()}"; }
+            get { return $"{Features.Select(x => x.FeatureName).AddComma()}"; }
         }
 
         public virtual ICollection<Feature> Features { get; set; }

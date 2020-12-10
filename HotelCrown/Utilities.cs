@@ -8,7 +8,7 @@ namespace HotelCrown
 {
     public static class Utilities
     {
-        public static string Comma(this IEnumerable<string> word) 
+        public static string AddComma(this IEnumerable<string> word) 
         {
             return string.Join(", ", word);
         }
