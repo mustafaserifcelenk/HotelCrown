@@ -14,9 +14,9 @@ namespace HotelCrown
     public partial class CustomerRegistration : Form
     {
         public event EventHandler ChangesDone;
-        private readonly Reservation reservation;
+        private readonly Room reservation;
         //public int customerId { get; set; }
-        public CustomerRegistration(Reservation context)
+        public CustomerRegistration(Room context)
         {
             reservation = context;
             InitializeComponent();

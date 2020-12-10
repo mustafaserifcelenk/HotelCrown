@@ -188,6 +188,21 @@
   <ItemGroup>
     <None Include="Resources\features_back.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver31.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

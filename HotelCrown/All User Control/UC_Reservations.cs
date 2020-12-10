@@ -35,8 +35,17 @@ namespace HotelCrown.All_User_Control
         {
             using (HotelCrownContext db = new HotelCrownContext())
             {
-                dgvReservations.DataSource = db.Reservations.ToList();
-            }
+                dgvReservations.DataSource = db.Reservations.SelectMany(x => db.Customers.Select(y => y), (x, y) =>
+                    new
+                    {
+                        x.Room.RoomNo,
+                        x.CheckInDate,
+                        x.CheckOutDate,
+                        x.CheckedIn,
+                        x.CheckedOut,
+                        y.FullName
+                    }).Distinct().ToList();
+                }
         }
         private void ListAdditionalRooms()
         {
@@ -44,20 +53,22 @@ namespace HotelCrown.All_User_Control
             {
                 dgvReservations.Visible = false;
                 dgvRooms.Visible = true;
-                //dgvReservations.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).SelectMany(y=>y.)
 
-                dgvReservations.DataSource = db.Rooms.Select(x => x.Reservations.Any(y => y.CheckInDate.Value >= checkOut || y.CheckOutDate <= checkIn)).ToList();
-
-                //List<CategoryArticle> rec = context.Category.SelectMany(a => a.Articles.Select(c => new CategoryArticle { Category_Id = c.Id, Article_Id = a.Id })).ToList();
-                //dgvRooms.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).ToList();
-                //dgvReservations.DataSource = db.Reservations.Where(x => x.CheckInDate.Value >= checkOut || x.CheckOutDate.Value <= checkIn).ToList();
+                //Rezervasyon için müsait olan odaları listele
+                dgvRooms.DataSource = db.Rooms.SelectMany(x => db.Reservations.Where(y => y.CheckInDate.Value >= checkOut || y.CheckOutDate.Value <= checkIn), (x, y) =>
+                new
+                {
+                    x.RoomId,
+                    x.RoomNo,
+                    x.Price,
+                    y.CheckInDate,
+                    y.CheckOutDate
+                }).Distinct().ToList();
             }
         }
 
         private void btnNewReservation_Click(object sender, EventArgs e)
         {
-            ListResarvation();
-
             checkIn = dtCheckIn.Value;
             checkOut = dtCheckOut.Value;
 
@@ -78,11 +89,6 @@ namespace HotelCrown.All_User_Control
             btnOutNo.Enabled = true;
             btnOutYes.Enabled = true;
             txtSearchBox.Enabled = true;
-
-            if (btnNewReservation.Text == "Add Reservation")
-            {
-                ListAdditionalRooms();
-            }
         }
 
         private void AddingMode()
@@ -100,10 +106,10 @@ namespace HotelCrown.All_User_Control
             btnOutYes.Enabled = false;
             txtSearchBox.Enabled = false;
 
-            if (btnNewReservation.Text == "Add Reservation")
-            {
-                ListAdditionalRooms();
-            }
+            //if (btnNewReservation.Text == "Add Reservation")
+            //{
+            //    ListAdditionalRooms();
+            //}
         }
 
 
@@ -133,20 +139,25 @@ namespace HotelCrown.All_User_Control
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            ListAdditionalRooms();
             //using (CustomerRegistration customerRegistration = new CustomerRegistration())
             //{
-
-            Reservation reservation = (Reservation)dgvReservations.SelectedRows[0].DataBoundItem;
-            CustomerRegistration frm = new CustomerRegistration(reservation);
-            frm.ChangesDone += Frm_ChangesDone;
-            frm.ShowDialog();
-
+            using (HotelCrownContext db = new HotelCrownContext())
+            {
+                int key = int.Parse(dgvRooms.SelectedRows[0].Cells[0].Value.ToString());
+                Room reservation = (Room)db.Rooms.FirstOrDefault(x => x.RoomId == key);
+                CustomerRegistration frm = new CustomerRegistration(reservation);
+                frm.ChangesDone += Frm_ChangesDone;
+                frm.ShowDialog();
+            }
             //customerId = customerRegistration.customerId;
             //}
         }
 
         private void Frm_ChangesDone(object sender, EventArgs e)
         {
+            dgvRooms.Visible = false;
+            dgvReservations.Visible = true;
             ListResarvation();
         }
 
@@ -169,7 +180,6 @@ namespace HotelCrown.All_User_Control
                 db.Reservations.Remove(deletingReservation);
                 db.SaveChanges();
             }
-            ListAdditionalRooms();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -234,7 +244,7 @@ namespace HotelCrown.All_User_Control
 
         private void btnOutAll_Click(object sender, EventArgs e)
         {
-                ListResarvation();
+            ListResarvation();
         }
 
         private void btnInYes_Click(object sender, EventArgs e)
