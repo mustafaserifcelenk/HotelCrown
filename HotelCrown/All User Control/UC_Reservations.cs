@@ -35,6 +35,7 @@ namespace HotelCrown.All_User_Control
         {
             using (HotelCrownContext db = new HotelCrownContext())
             {
+
                 dgvReservations.DataSource = db.Reservations.SelectMany(x => db.Customers.Select(y => y), (x, y) =>
                     new
                     {
@@ -43,19 +44,16 @@ namespace HotelCrown.All_User_Control
                         x.CheckOutDate,
                         x.CheckedIn,
                         x.CheckedOut,
-                        y.FullName
+                        //x.AllCustomers : Classta bu objenin değerleri anlamadığım bir şekilde null geliyor
                     }).Distinct().ToList();
-                }
+            }
         }
         private void ListAdditionalRooms()
         {
             using (HotelCrownContext db = new HotelCrownContext())
             {
-                dgvReservations.Visible = false;
-                dgvRooms.Visible = true;
-
                 //Rezervasyon için müsait olan odaları listele
-                dgvRooms.DataSource = db.Rooms.SelectMany(x => db.Reservations.Where(y => y.CheckInDate.Value >= checkOut || y.CheckOutDate.Value <= checkIn), (x, y) =>
+                dgvRooms.DataSource = db.Rooms.SelectMany(x => db.Reservations.Where(y => y.CheckInDate >= checkOut || y.CheckOutDate <= checkIn), (x, y) =>
                 new
                 {
                     x.RoomId,
@@ -69,14 +67,20 @@ namespace HotelCrown.All_User_Control
 
         private void btnNewReservation_Click(object sender, EventArgs e)
         {
-            checkIn = dtCheckIn.Value;
-            checkOut = dtCheckOut.Value;
-
+            checkIn = dtCheckInRooms.Value;
+            checkOut = dtCheckOutRooms.Value;
             AddingMode();
         }
 
         private void NormalMode()
         {
+            dgvReservations.Visible = true;
+            dgvRooms.Visible = false;
+            dtCheckIn.Visible = true;
+            dtCheckOut.Visible = true;
+            dtCheckOutRooms.Visible = false;
+            dtCheckInRooms.Visible = false;
+            dtCheckOut.Visible = false;
             btnNewReservation.Visible = true;
             btnAddCustomer.Visible = false;
             btnEdit.Visible = true;
@@ -93,6 +97,12 @@ namespace HotelCrown.All_User_Control
 
         private void AddingMode()
         {
+            dgvReservations.Visible = false;
+            dgvRooms.Visible = true;
+            dtCheckIn.Visible = false;
+            dtCheckOut.Visible = false;
+            dtCheckInRooms.Visible = true;
+            dtCheckOutRooms.Visible = true;
             btnNewReservation.Visible = false;
             btnAddCustomer.Visible = true;
             btnEdit.Visible = false;
@@ -106,12 +116,7 @@ namespace HotelCrown.All_User_Control
             btnOutYes.Enabled = false;
             txtSearchBox.Enabled = false;
 
-            //if (btnNewReservation.Text == "Add Reservation")
-            //{
-            //    ListAdditionalRooms();
-            //}
         }
-
 
         private void dtCheckIn_ValueChanged(object sender, EventArgs e)
         {
@@ -120,8 +125,8 @@ namespace HotelCrown.All_User_Control
                 MessageBox.Show("Check-out date value must be higher than check-in date value.");
                 return;
             }
-            checkIn = dtCheckIn.Value;
-            checkOut = dtCheckOut.Value;
+            checkIn = dtCheckInRooms.Value; // İki tane ikişer date time picker oluşturdum, biri rezervasyon sort için diğeri room sort için
+            checkOut = dtCheckOutRooms.Value;
             ListAdditionalRooms();
         }
 
@@ -132,21 +137,22 @@ namespace HotelCrown.All_User_Control
                 MessageBox.Show("Check-out date value must be higher than check-in date value.");
                 return;
             }
-            checkIn = dtCheckIn.Value;
-            checkOut = dtCheckOut.Value;
+            checkIn = dtCheckInRooms.Value;
+            checkOut = dtCheckOutRooms.Value;
             ListAdditionalRooms();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            ListAdditionalRooms();
+            //ListAdditionalRooms();
             //using (CustomerRegistration customerRegistration = new CustomerRegistration())
             //{
             using (HotelCrownContext db = new HotelCrownContext())
             {
                 int key = int.Parse(dgvRooms.SelectedRows[0].Cells[0].Value.ToString());
-                Room reservation = (Room)db.Rooms.FirstOrDefault(x => x.RoomId == key);
-                CustomerRegistration frm = new CustomerRegistration(reservation);
+                MessageBox.Show(key.ToString());
+                //Room reservation = (Room)db.Rooms.FirstOrDefault(x => x.RoomId == key);
+                CustomerRegistration frm = new CustomerRegistration(key);
                 frm.ChangesDone += Frm_ChangesDone;
                 frm.ShowDialog();
             }
@@ -237,11 +243,6 @@ namespace HotelCrown.All_User_Control
             PanelEdit.Visible = false;
         }
 
-        private void dgvReservations_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnOutAll_Click(object sender, EventArgs e)
         {
             ListResarvation();
@@ -293,6 +294,30 @@ namespace HotelCrown.All_User_Control
             {
                 dgvReservations.DataSource = db.Reservations.Select(x => x.Customers.Any(y => y.FullName.Contains(contain))).ToList();
             }
+        }
+
+        private void dtCheckInRooms_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtCheckIn.Value >= dtCheckOut.Value)
+            {
+                MessageBox.Show("Check-out date value must be higher than check-in date value.");
+                return;
+            }
+            checkIn = dtCheckInRooms.Value; // İki tane ikişer date time picker oluşturdum, biri rezervasyon sort için diğeri room sort için
+            checkOut = dtCheckOutRooms.Value;
+            ListAdditionalRooms();
+        }
+
+        private void dtCheckOutRooms_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtCheckIn.Value >= dtCheckOut.Value)
+            {
+                MessageBox.Show("Check-out date value must be higher than check-in date value.");
+                return;
+            }
+            checkIn = dtCheckInRooms.Value;
+            checkOut = dtCheckOutRooms.Value;
+            ListAdditionalRooms();
         }
     }
 }

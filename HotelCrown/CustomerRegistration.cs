@@ -14,9 +14,10 @@ namespace HotelCrown
     public partial class CustomerRegistration : Form
     {
         public event EventHandler ChangesDone;
-        private readonly Room reservation;
+        //private readonly Room reservation;
         //public int customerId { get; set; }
-        public CustomerRegistration(Room context)
+        int reservation;
+        public CustomerRegistration(int context)
         {
             reservation = context;
             InitializeComponent();
@@ -59,25 +60,27 @@ namespace HotelCrown
             int quantity = int.Parse(nudQuantity.Text);
             int customerId = alloteCustomer.Id;
 
-            int roomId = reservation.RoomId;
+            //int roomId = reservation.RoomId;
             string checkedIn = (cbxCheckedIn.Checked) ? "Yes" : "No";
             string checkedOut = (cbxCheckedOut.Checked) ? "Yes" : "No";
 
             using (HotelCrownContext db = new HotelCrownContext())
             {
                 string serveCustomer = cboServices.Text;
+                Room addRoom = (Room)db.Rooms.FirstOrDefault(x => x.RoomId == reservation);
                 ReservationService serviceCustomer = db.ReservationServices.FirstOrDefault(x => x.ServiceName == serveCustomer);
                 Customer reserveCustomer = db.Customers.FirstOrDefault(x => x.Id == customerId);
 
                 db.Reservations.Add(new Reservation()
                 {
+                    RoomId = reservation,
                     CheckInDate = checkInDate,
                     CheckOutDate = checkOutDate,
                     CheckedInTime = checkedInTime,
                     CheckedOutTime = checkedOutTime,
                     CheckedIn = checkedIn,
                     CheckedOut = checkedOut,
-                    RoomId = roomId,
+                    Room = addRoom,
                     Customers = new List<Customer> { reserveCustomer },
                     ReservationServices = new List<ReservationService> { serviceCustomer }
                 }) ;
