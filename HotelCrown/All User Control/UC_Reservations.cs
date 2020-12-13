@@ -42,9 +42,8 @@ namespace HotelCrown.All_User_Control
                         x.CheckOutDate,
                         x.CheckedIn,
                         x.CheckedOut,
-                        //y.FullName
+                        y.FullName
                     }).Distinct().ToList();
-                //x.AllCustomers : Classta bu objenin değerleri anlamadığım bir şekilde null geliyor
             }
         }
         private void ListAdditionalRooms()
