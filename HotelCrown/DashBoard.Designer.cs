@@ -39,11 +39,6 @@ namespace HotelCrown
             this.btnRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btnReservation = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Customers1 = new HotelCrown.All_User_Control.UC_Customers();
-            this.uC_Reservations1 = new HotelCrown.All_User_Control.UC_Reservations();
-            this.uC_Services1 = new HotelCrown.All_User_Control.UC_Services();
-            this.uC_AddRoom1 = new HotelCrown.All_User_Control.UC_AddRoom();
-            this.uC_Features1 = new HotelCrown.All_User_Control.UC_Features();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -51,6 +46,11 @@ namespace HotelCrown
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_Customers1 = new HotelCrown.All_User_Control.UC_Customers();
+            this.uC_Reservations1 = new HotelCrown.All_User_Control.UC_Reservations();
+            this.uC_Services1 = new HotelCrown.All_User_Control.UC_Services();
+            this.uC_AddRoom1 = new HotelCrown.All_User_Control.UC_AddRoom();
+            this.uC_Features1 = new HotelCrown.All_User_Control.UC_Features();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,16 +67,16 @@ namespace HotelCrown
             this.panel1.Controls.Add(this.btnFeatures);
             this.panel1.Controls.Add(this.btnRoom);
             this.panel1.Controls.Add(this.btnReservation);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(5, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1565, 100);
+            this.panel1.Size = new System.Drawing.Size(1572, 100);
             this.panel1.TabIndex = 0;
             // 
             // pnlMoving
             // 
             this.pnlMoving.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlMoving.BackColor = System.Drawing.Color.Red;
-            this.pnlMoving.Location = new System.Drawing.Point(29, 92);
+            this.pnlMoving.Location = new System.Drawing.Point(20, 92);
             this.pnlMoving.Name = "pnlMoving";
             this.pnlMoving.Size = new System.Drawing.Size(280, 5);
             this.pnlMoving.TabIndex = 5;
@@ -99,7 +99,7 @@ namespace HotelCrown
             this.btnCustomers.HoverState.Parent = this.btnCustomers;
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnCustomers.Location = new System.Drawing.Point(1262, 12);
+            this.btnCustomers.Location = new System.Drawing.Point(1266, 12);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.ShadowDecoration.Parent = this.btnCustomers;
             this.btnCustomers.Size = new System.Drawing.Size(300, 75);
@@ -125,7 +125,7 @@ namespace HotelCrown
             this.btnServices.HoverState.Parent = this.btnServices;
             this.btnServices.Image = ((System.Drawing.Image)(resources.GetObject("btnServices.Image")));
             this.btnServices.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnServices.Location = new System.Drawing.Point(650, 12);
+            this.btnServices.Location = new System.Drawing.Point(654, 12);
             this.btnServices.Name = "btnServices";
             this.btnServices.ShadowDecoration.Parent = this.btnServices;
             this.btnServices.Size = new System.Drawing.Size(300, 75);
@@ -151,7 +151,7 @@ namespace HotelCrown
             this.btnFeatures.HoverState.Parent = this.btnFeatures;
             this.btnFeatures.Image = ((System.Drawing.Image)(resources.GetObject("btnFeatures.Image")));
             this.btnFeatures.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnFeatures.Location = new System.Drawing.Point(956, 12);
+            this.btnFeatures.Location = new System.Drawing.Point(960, 12);
             this.btnFeatures.Name = "btnFeatures";
             this.btnFeatures.ShadowDecoration.Parent = this.btnFeatures;
             this.btnFeatures.Size = new System.Drawing.Size(300, 75);
@@ -177,7 +177,7 @@ namespace HotelCrown
             this.btnRoom.HoverState.Parent = this.btnRoom;
             this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
             this.btnRoom.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnRoom.Location = new System.Drawing.Point(344, 12);
+            this.btnRoom.Location = new System.Drawing.Point(348, 12);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.ShadowDecoration.Parent = this.btnRoom;
             this.btnRoom.Size = new System.Drawing.Size(300, 75);
@@ -204,10 +204,10 @@ namespace HotelCrown
             this.btnReservation.HoverState.Parent = this.btnReservation;
             this.btnReservation.Image = ((System.Drawing.Image)(resources.GetObject("btnReservation.Image")));
             this.btnReservation.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnReservation.Location = new System.Drawing.Point(19, 12);
+            this.btnReservation.Location = new System.Drawing.Point(7, 12);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.ShadowDecoration.Parent = this.btnReservation;
-            this.btnReservation.Size = new System.Drawing.Size(300, 75);
+            this.btnReservation.Size = new System.Drawing.Size(316, 75);
             this.btnReservation.TabIndex = 0;
             this.btnReservation.Text = "Reservations";
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
@@ -226,56 +226,6 @@ namespace HotelCrown
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1656, 541);
             this.panel2.TabIndex = 0;
-            // 
-            // uC_Customers1
-            // 
-            this.uC_Customers1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uC_Customers1.BackColor = System.Drawing.Color.Transparent;
-            this.uC_Customers1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
-            this.uC_Customers1.Location = new System.Drawing.Point(-250, -409);
-            this.uC_Customers1.Name = "uC_Customers1";
-            this.uC_Customers1.Size = new System.Drawing.Size(1906, 947);
-            this.uC_Customers1.TabIndex = 2;
-            this.uC_Customers1.Visible = false;
-            // 
-            // uC_Reservations1
-            // 
-            this.uC_Reservations1.BackColor = System.Drawing.Color.Transparent;
-            this.uC_Reservations1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
-            this.uC_Reservations1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.uC_Reservations1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Reservations1.Name = "uC_Reservations1";
-            this.uC_Reservations1.Size = new System.Drawing.Size(1906, 947);
-            this.uC_Reservations1.TabIndex = 1;
-            // 
-            // uC_Services1
-            // 
-            this.uC_Services1.BackColor = System.Drawing.Color.Transparent;
-            this.uC_Services1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_Services1.BackgroundImage")));
-            this.uC_Services1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Services1.Name = "uC_Services1";
-            this.uC_Services1.Size = new System.Drawing.Size(1906, 947);
-            this.uC_Services1.TabIndex = 4;
-            this.uC_Services1.Visible = false;
-            // 
-            // uC_AddRoom1
-            // 
-            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
-            this.uC_AddRoom1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
-            this.uC_AddRoom1.Location = new System.Drawing.Point(0, 0);
-            this.uC_AddRoom1.Name = "uC_AddRoom1";
-            this.uC_AddRoom1.Size = new System.Drawing.Size(1906, 947);
-            this.uC_AddRoom1.TabIndex = 0;
-            // 
-            // uC_Features1
-            // 
-            this.uC_Features1.BackColor = System.Drawing.Color.Transparent;
-            this.uC_Features1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
-            this.uC_Features1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Features1.Name = "uC_Features1";
-            this.uC_Features1.Size = new System.Drawing.Size(1906, 947);
-            this.uC_Features1.TabIndex = 3;
-            this.uC_Features1.Visible = false;
             // 
             // guna2Elipse1
             // 
@@ -344,6 +294,56 @@ namespace HotelCrown
             // 
             this.guna2Elipse5.BorderRadius = 30;
             this.guna2Elipse5.TargetControl = this;
+            // 
+            // uC_Customers1
+            // 
+            this.uC_Customers1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uC_Customers1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Customers1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
+            this.uC_Customers1.Location = new System.Drawing.Point(-250, -409);
+            this.uC_Customers1.Name = "uC_Customers1";
+            this.uC_Customers1.Size = new System.Drawing.Size(1906, 947);
+            this.uC_Customers1.TabIndex = 2;
+            this.uC_Customers1.Visible = false;
+            // 
+            // uC_Reservations1
+            // 
+            this.uC_Reservations1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Reservations1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
+            this.uC_Reservations1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.uC_Reservations1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Reservations1.Name = "uC_Reservations1";
+            this.uC_Reservations1.Size = new System.Drawing.Size(1906, 947);
+            this.uC_Reservations1.TabIndex = 1;
+            // 
+            // uC_Services1
+            // 
+            this.uC_Services1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Services1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_Services1.BackgroundImage")));
+            this.uC_Services1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Services1.Name = "uC_Services1";
+            this.uC_Services1.Size = new System.Drawing.Size(1906, 947);
+            this.uC_Services1.TabIndex = 4;
+            this.uC_Services1.Visible = false;
+            // 
+            // uC_AddRoom1
+            // 
+            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
+            this.uC_AddRoom1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
+            this.uC_AddRoom1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddRoom1.Name = "uC_AddRoom1";
+            this.uC_AddRoom1.Size = new System.Drawing.Size(1906, 947);
+            this.uC_AddRoom1.TabIndex = 0;
+            // 
+            // uC_Features1
+            // 
+            this.uC_Features1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Features1.BackgroundImage = global::HotelCrown.Properties.Resources.silver3;
+            this.uC_Features1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Features1.Name = "uC_Features1";
+            this.uC_Features1.Size = new System.Drawing.Size(1906, 947);
+            this.uC_Features1.TabIndex = 3;
+            this.uC_Features1.Visible = false;
             // 
             // DashBoard
             // 

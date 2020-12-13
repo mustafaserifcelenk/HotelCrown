@@ -119,26 +119,20 @@ namespace HotelCrown.All_User_Control
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            //ListAdditionalRooms();
-            //using (CustomerRegistration customerRegistration = new CustomerRegistration())
-            //{
             using (HotelCrownContext db = new HotelCrownContext())
             {
                 int key = int.Parse(dgvRooms.SelectedRows[0].Cells[0].Value.ToString());
-                MessageBox.Show(key.ToString());
-                //Room reservation = (Room)db.Rooms.FirstOrDefault(x => x.RoomId == key);
                 CustomerRegistration frm = new CustomerRegistration(key);
                 frm.ChangesDone += Frm_ChangesDone;
                 frm.ShowDialog();
             }
-            //customerId = customerRegistration.customerId;
-            //}
         }
 
         private void Frm_ChangesDone(object sender, EventArgs e)
         {
             dgvRooms.Visible = false;
             dgvReservations.Visible = true;
+            NormalMode();
             ListResarvation();
         }
 
