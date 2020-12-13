@@ -30,30 +30,26 @@ namespace HotelCrown.All_User_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNewReservation = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvReservations = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.PanelControls = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtCheckOutRooms = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dtCheckInRooms = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnOutNo = new Guna.UI2.WinForms.Guna2Button();
             this.btnOutYes = new Guna.UI2.WinForms.Guna2Button();
@@ -81,8 +77,13 @@ namespace HotelCrown.All_User_Control
             this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.dgvRooms = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dtCheckOutRooms = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtCheckInRooms = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.PanelControls.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -117,23 +118,24 @@ namespace HotelCrown.All_User_Control
             // 
             this.dgvReservations.AllowUserToAddRows = false;
             this.dgvReservations.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            this.dgvReservations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvReservations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvReservations.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvReservations.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReservations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvReservations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvReservations.ColumnHeadersHeight = 60;
             this.dgvReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -141,31 +143,31 @@ namespace HotelCrown.All_User_Control
             this.Column5,
             this.Column6});
             this.dgvReservations.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReservations.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReservations.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvReservations.EnableHeadersVisualStyles = false;
             this.dgvReservations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvReservations.Location = new System.Drawing.Point(13, 148);
             this.dgvReservations.Name = "dgvReservations";
             this.dgvReservations.ReadOnly = true;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvReservations.RowHeadersVisible = false;
             this.dgvReservations.RowHeadersWidth = 45;
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvReservations.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvReservations.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvReservations.RowTemplate.Height = 35;
             this.dgvReservations.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -193,69 +195,6 @@ namespace HotelCrown.All_User_Control
             this.dgvReservations.ThemeStyle.RowsStyle.Height = 35;
             this.dgvReservations.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvReservations.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.DataPropertyName = "Roomno";
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "Room No";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.DataPropertyName = "CheckInDate";
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "Check-In Date";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "CheckOutDate";
-            this.Column3.Frozen = true;
-            this.Column3.HeaderText = "Check-Out Date";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 300;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.DataPropertyName = "CheckedIn";
-            this.Column4.Frozen = true;
-            this.Column4.HeaderText = "Checked-In";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 350;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.DataPropertyName = "CheckedOut";
-            this.Column5.Frozen = true;
-            this.Column5.HeaderText = "Checked-Out";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.Width = 350;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column6.DataPropertyName = "FullName";
-            this.Column6.Frozen = true;
-            this.Column6.HeaderText = "Customer";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 450;
             // 
             // btnDelete
             // 
@@ -293,10 +232,8 @@ namespace HotelCrown.All_User_Control
             // 
             // PanelControls
             // 
-            this.PanelControls.Controls.Add(this.dtCheckOutRooms);
             this.PanelControls.Controls.Add(this.label7);
             this.PanelControls.Controls.Add(this.txtSearchBox);
-            this.PanelControls.Controls.Add(this.dtCheckInRooms);
             this.PanelControls.Controls.Add(this.guna2Panel3);
             this.PanelControls.Controls.Add(this.guna2Panel2);
             this.PanelControls.Controls.Add(this.label3);
@@ -304,11 +241,31 @@ namespace HotelCrown.All_User_Control
             this.PanelControls.Controls.Add(this.label2);
             this.PanelControls.Controls.Add(this.dtCheckIn);
             this.PanelControls.Controls.Add(this.label1);
+            this.PanelControls.Controls.Add(this.dtCheckInRooms);
+            this.PanelControls.Controls.Add(this.dtCheckOutRooms);
             this.PanelControls.Location = new System.Drawing.Point(16, 52);
             this.PanelControls.Name = "PanelControls";
             this.PanelControls.ShadowDecoration.Parent = this.PanelControls;
             this.PanelControls.Size = new System.Drawing.Size(1880, 90);
             this.PanelControls.TabIndex = 4;
+            // 
+            // dtCheckOutRooms
+            // 
+            this.dtCheckOutRooms.CheckedState.Parent = this.dtCheckOutRooms;
+            this.dtCheckOutRooms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtCheckOutRooms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtCheckOutRooms.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtCheckOutRooms.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtCheckOutRooms.HoverState.Parent = this.dtCheckOutRooms;
+            this.dtCheckOutRooms.Location = new System.Drawing.Point(508, 23);
+            this.dtCheckOutRooms.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtCheckOutRooms.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtCheckOutRooms.Name = "dtCheckOutRooms";
+            this.dtCheckOutRooms.ShadowDecoration.Parent = this.dtCheckOutRooms;
+            this.dtCheckOutRooms.Size = new System.Drawing.Size(200, 56);
+            this.dtCheckOutRooms.TabIndex = 14;
+            this.dtCheckOutRooms.Value = new System.DateTime(2020, 12, 6, 11, 22, 20, 512);
+            this.dtCheckOutRooms.ValueChanged += new System.EventHandler(this.dtCheckOutRooms_ValueChanged);
             // 
             // label7
             // 
@@ -345,6 +302,24 @@ namespace HotelCrown.All_User_Control
             this.txtSearchBox.Size = new System.Drawing.Size(296, 56);
             this.txtSearchBox.TabIndex = 12;
             this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
+            // 
+            // dtCheckInRooms
+            // 
+            this.dtCheckInRooms.CheckedState.Parent = this.dtCheckInRooms;
+            this.dtCheckInRooms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtCheckInRooms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtCheckInRooms.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtCheckInRooms.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtCheckInRooms.HoverState.Parent = this.dtCheckInRooms;
+            this.dtCheckInRooms.Location = new System.Drawing.Point(245, 23);
+            this.dtCheckInRooms.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtCheckInRooms.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtCheckInRooms.Name = "dtCheckInRooms";
+            this.dtCheckInRooms.ShadowDecoration.Parent = this.dtCheckInRooms;
+            this.dtCheckInRooms.Size = new System.Drawing.Size(200, 56);
+            this.dtCheckInRooms.TabIndex = 13;
+            this.dtCheckInRooms.Value = new System.DateTime(2020, 12, 6, 11, 22, 0, 0);
+            this.dtCheckInRooms.ValueChanged += new System.EventHandler(this.dtCheckInRooms_ValueChanged);
             // 
             // guna2Panel3
             // 
@@ -739,48 +714,48 @@ namespace HotelCrown.All_User_Control
             // 
             this.dgvRooms.AllowUserToAddRows = false;
             this.dgvRooms.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRooms.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRooms.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvRooms.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvRooms.ColumnHeadersHeight = 60;
             this.dgvRooms.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvRooms.EnableHeadersVisualStyles = false;
             this.dgvRooms.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRooms.Location = new System.Drawing.Point(13, 148);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.ReadOnly = true;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvRooms.RowHeadersVisible = false;
             this.dgvRooms.RowHeadersWidth = 45;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvRooms.RowTemplate.Height = 35;
             this.dgvRooms.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -810,41 +785,76 @@ namespace HotelCrown.All_User_Control
             this.dgvRooms.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvRooms.Visible = false;
             // 
-            // dtCheckOutRooms
+            // Id
             // 
-            this.dtCheckOutRooms.CheckedState.Parent = this.dtCheckOutRooms;
-            this.dtCheckOutRooms.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtCheckOutRooms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtCheckOutRooms.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtCheckOutRooms.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCheckOutRooms.HoverState.Parent = this.dtCheckOutRooms;
-            this.dtCheckOutRooms.Location = new System.Drawing.Point(508, 23);
-            this.dtCheckOutRooms.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtCheckOutRooms.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtCheckOutRooms.Name = "dtCheckOutRooms";
-            this.dtCheckOutRooms.ShadowDecoration.Parent = this.dtCheckOutRooms;
-            this.dtCheckOutRooms.Size = new System.Drawing.Size(200, 56);
-            this.dtCheckOutRooms.TabIndex = 14;
-            this.dtCheckOutRooms.Value = new System.DateTime(2020, 12, 6, 11, 22, 20, 512);
-            this.dtCheckOutRooms.ValueChanged += new System.EventHandler(this.dtCheckOutRooms_ValueChanged);
+            this.Id.DataPropertyName = "Id";
+            this.Id.Frozen = true;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 44;
             // 
-            // dtCheckInRooms
+            // Column1
             // 
-            this.dtCheckInRooms.CheckedState.Parent = this.dtCheckInRooms;
-            this.dtCheckInRooms.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtCheckInRooms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtCheckInRooms.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtCheckInRooms.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCheckInRooms.HoverState.Parent = this.dtCheckInRooms;
-            this.dtCheckInRooms.Location = new System.Drawing.Point(245, 23);
-            this.dtCheckInRooms.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtCheckInRooms.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtCheckInRooms.Name = "dtCheckInRooms";
-            this.dtCheckInRooms.ShadowDecoration.Parent = this.dtCheckInRooms;
-            this.dtCheckInRooms.Size = new System.Drawing.Size(200, 56);
-            this.dtCheckInRooms.TabIndex = 13;
-            this.dtCheckInRooms.Value = new System.DateTime(2020, 12, 6, 11, 22, 0, 0);
-            this.dtCheckInRooms.ValueChanged += new System.EventHandler(this.dtCheckInRooms_ValueChanged);
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.DataPropertyName = "Roomno";
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "Room No";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.DataPropertyName = "CheckInDate";
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "Check-In Date";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "CheckOutDate";
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "Check-Out Date";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 300;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.DataPropertyName = "CheckedIn";
+            this.Column4.Frozen = true;
+            this.Column4.HeaderText = "Checked-In";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 350;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "CheckedOut";
+            this.Column5.Frozen = true;
+            this.Column5.HeaderText = "Checked-Out";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.Width = 350;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.DataPropertyName = "FullName";
+            this.Column6.Frozen = true;
+            this.Column6.HeaderText = "Customer";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 450;
             // 
             // UC_Reservations
             // 
@@ -859,8 +869,8 @@ namespace HotelCrown.All_User_Control
             this.Controls.Add(this.btnNewReservation);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.PanelEdit);
-            this.Controls.Add(this.dgvRooms);
             this.Controls.Add(this.dgvReservations);
+            this.Controls.Add(this.dgvRooms);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "UC_Reservations";
             this.Size = new System.Drawing.Size(1899, 947);
@@ -914,14 +924,15 @@ namespace HotelCrown.All_User_Control
         private Guna.UI2.WinForms.Guna2ComboBox cboServices;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudQuantity;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvRooms;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtCheckOutRooms;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtCheckInRooms;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvRooms;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtCheckOutRooms;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtCheckInRooms;
     }
 }
